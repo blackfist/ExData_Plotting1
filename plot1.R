@@ -9,7 +9,7 @@ hist(electric$Global_active_power, col="red",
      ylab="Frequency")
 
 # second time to write it to the file
-png(file="plot1.png")
+png(file="plot1.png", width=480, height=480)
 hist(electric$Global_active_power, col="red", 
      main="Global Active Power", 
      xlab="Global Active Power (kilowatts)",
