@@ -1,7 +1,4 @@
 electric <- read.table("smaller.txt",sep=";",header=TRUE)
-#electric$Date <- as.Date(electric$Date, "%d/ %m/ %Y")
-
-
 electric$timestamp = strptime(paste(electric$Date, electric$Time),
                               format="%d/%m/%Y %H:%M:%S", tz="UTC")
 # One time for me to look at

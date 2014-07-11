@@ -1,6 +1,6 @@
 electric <- read.table("smaller.txt",sep=";",header=TRUE)
-names(electric)
-electric$Date <- as.Date(electric$Date, "%d/ %m/ %Y")
+electric$timestamp = strptime(paste(electric$Date, electric$Time),
+                              format="%d/%m/%Y %H:%M:%S", tz="UTC")
 
 # First time just to see it on my screen
 hist(electric$Global_active_power, col="red", 
